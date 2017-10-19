@@ -20,7 +20,7 @@ class BoschIndego {
     public function __construct($username, $password) {
         $this->setBaseUrl("https://api.indego.iot.bosch-si.com/api/v1/");
         $response = $this->doAuthentication($username, $password);
-        $this->setContectId($response->contextId);
+        $this->setContextId($response->contextId);
         $this->setUserId($response->userId);
         $this->setAlmSn($response->alm_sn);
     }
@@ -42,7 +42,7 @@ class BoschIndego {
     /**
      * @param $contextId
      */
-    protected function setContectId($contextId) {
+    protected function setContextId($contextId) {
         $this->contextId = $contextId;
     }
 
